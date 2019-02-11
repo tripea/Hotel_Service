@@ -127,7 +127,7 @@ public class RestControllerTest {
 
 		Hotel newHotel = new Hotel(105, "Taj",
 				new Address("Sector 2", "Neer to Cap", "Maharashtra", "India", "Pali", 415205), review, rooms, hotelPic,
-				facilities, "In description it is best hotel in India", 50);
+				facilities, "In description it is best hotel in India", 50 , 50);
 		ResponseEntity<String> responseEntity = testRestTemplate.postForEntity("/hotels/", newHotel, String.class);
 		assertEquals(HttpStatus.CREATED, responseEntity.getStatusCode());
 	}
@@ -165,7 +165,7 @@ public class RestControllerTest {
 
 		Hotel newHotel = new Hotel(110, "Taj",
 				new Address("Sector 2", "Neer to Cap", "Maharashtra", "India", "Pali", 415205), review, rooms, hotelPic,
-				facilities, "In description it is best hotel in India", 50);
+				facilities, "In description it is best hotel in India",50 , 50);
 
 		testRestTemplate.put("/hotels/110", newHotel);
 

@@ -41,6 +41,25 @@ public class Hotel {
 		this.address = address;
 	}
 
+	
+	public Hotel(Integer hotelId, String hotelName, Address address, HashMap<Integer, String> review, Set<Room> rooms,
+			List<String> photos, Integer totalRooms, Integer totalAvailableRooms, Map<String, List<String>> facilities,
+			String description, String lattitude, String longitude) {
+		super();
+		this.hotelId = hotelId;
+		this.hotelName = hotelName;
+		this.address = address;
+		this.review = review;
+		this.rooms = rooms;
+		this.photos = photos;
+		this.totalRooms = totalRooms;
+		this.totalAvailableRooms = totalAvailableRooms;
+		this.facilities = facilities;
+		this.description = description;
+		this.lattitude = lattitude;
+		this.longitude = longitude;
+	}
+
 	/*
 	 * public Hotel(Integer hotelId, String hotelName, Address address,
 	 * HashMap<Integer, String> review, Set<Room> rooms, List<String> photos,
@@ -54,7 +73,7 @@ public class Hotel {
 	 */
 
 	public Hotel(Integer hotelId, String hotelName, Address address, HashMap<Integer, String> review, Set<Room> rooms,
-			List<String> photos, Map<String, List<String>> facilities, String description, Integer totalRooms) {
+			List<String> photos, Map<String, List<String>> facilities, String description, Integer totalRooms,Integer totalAvailableRooms) {
 		super();
 		this.hotelId = hotelId;
 		this.hotelName = hotelName;
@@ -65,6 +84,7 @@ public class Hotel {
 		this.facilities = facilities;
 		this.description = description;
 		this.totalRooms = totalRooms;
+		this.totalAvailableRooms = totalAvailableRooms;
 	}
 
 	public Hotel(Integer hotelId, String hotelName, Address address, HashMap<Integer, String> review, Set<Room> rooms,

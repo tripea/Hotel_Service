@@ -84,7 +84,7 @@ public class ServiceTest {
 
 		Hotel newHotel = new Hotel(115, "Taj",
 				new Address("Sector 2", "Neer to Cap", "Maharashtra", "India", "Pali", 415205), review, rooms, hotelPic,
-				facilities, "In description it is best hotel in India", 50);
+				facilities, "In description it is best hotel in India",50, 50);
 		hotelService.addNewHotel(newHotel);
 
 	}
@@ -134,7 +134,7 @@ public class ServiceTest {
 
 		Hotel newHotel = new Hotel(555, "Taj",
 				new Address("Sector 2", "Neer to Cap", "Maharashtra", "India", "Pali", 415205), review, rooms, hotelPic,
-				facilities, "In description it is best hotel in India", 50);
+				facilities, "In description it is best hotel in India", 50 , 50);
 		newHotel.setHotelName("Samrat Hotel");
 		newHotel.setTotalAvailableRooms(50);
 		Hotel updatedHotel = hotelService.update(newHotel);

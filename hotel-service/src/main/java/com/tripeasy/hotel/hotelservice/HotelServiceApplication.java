@@ -65,10 +65,26 @@ public class HotelServiceApplication {
 		hotelPic.add("Hotel Image4");
 		facilities.put("Taj", hotelFacilities);
 		return (args) -> {
-			repository.save(new Hotel(10, "TejHotel",
+			repository.save(new Hotel(101, "TejHotel",
 					new Address("Sector 2", "Neer to Cap", "Maharashtra", "India", "Mumbai", 415205), review, rooms,
-					hotelPic, facilities, "In description it is best hotel in India", 50));
-
+					hotelPic, facilities, "In description it is best hotel in India", 50,50));
+			
+			repository.save(new Hotel(102, "Hotel Maharaja",
+					new Address("Sector 2", "Neer to Cap", "Maharashtra", "India", "Mumbai", 415205), review, rooms,
+					hotelPic, facilities, "In description it is best hotel in India", 60,60));
+			
+			repository.save(new Hotel(103, "SP",
+					new Address("Sector 2", "Neer to Cap", "Maharashtra", "India", "Mumbai", 415205), review, rooms,
+					hotelPic, facilities, "In description it is best hotel in India", 40,40));
+			
+			repository.save(new Hotel(104, "Assal Konkani",
+					new Address("Sector 2", "Neer to Cap", "Maharashtra", "India", "Mumbai", 415205), review, rooms,
+					hotelPic, facilities, "In description it is best hotel in India", 45,45));
+				
+			repository.save(new Hotel(105, "Taj",
+					new Address("Sector 2", "Neer to Cap", "Maharashtra", "India", "Mumbai", 415205), review, rooms,
+					hotelPic, facilities, "In description it is best hotel in India", 500,500));
+			
 		};
 
 	}
