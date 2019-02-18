@@ -14,7 +14,7 @@ public class Hotel {
 	@Id
 	private Integer hotelId;
 	private String hotelName;
-	private Address address;
+	private HotelAddress address;
 	private HashMap<Integer, String> review;
 	private Set<Room> rooms;
 	private List<String> photos;
@@ -34,7 +34,7 @@ public class Hotel {
 
 	}
 
-	public Hotel(Integer hotelId, String hotelName, Address address) {
+	public Hotel(Integer hotelId, String hotelName, HotelAddress address) {
 		super();
 		this.hotelId = hotelId;
 		this.hotelName = hotelName;
@@ -42,7 +42,7 @@ public class Hotel {
 	}
 
 	
-	public Hotel(Integer hotelId, String hotelName, Address address, HashMap<Integer, String> review, Set<Room> rooms,
+	public Hotel(Integer hotelId, String hotelName, HotelAddress address, HashMap<Integer, String> review, Set<Room> rooms,
 			List<String> photos, Integer totalRooms, Integer totalAvailableRooms, Map<String, List<String>> facilities,
 			String description, String lattitude, String longitude) {
 		super();
@@ -72,7 +72,7 @@ public class Hotel {
 	 * = lattitude; this.longitude = longitude; }
 	 */
 
-	public Hotel(Integer hotelId, String hotelName, Address address, HashMap<Integer, String> review, Set<Room> rooms,
+	public Hotel(Integer hotelId, String hotelName, HotelAddress address, HashMap<Integer, String> review, Set<Room> rooms,
 			List<String> photos, Map<String, List<String>> facilities, String description, Integer totalRooms,Integer totalAvailableRooms) {
 		super();
 		this.hotelId = hotelId;
@@ -87,7 +87,7 @@ public class Hotel {
 		this.totalAvailableRooms = totalAvailableRooms;
 	}
 
-	public Hotel(Integer hotelId, String hotelName, Address address, HashMap<Integer, String> review, Set<Room> rooms,
+	public Hotel(Integer hotelId, String hotelName, HotelAddress address, HashMap<Integer, String> review, Set<Room> rooms,
 			List<String> photos, Integer totalRooms, Map<String, List<String>> facilities, String description,
 			String lattitude, String longitude) {
 		super();
@@ -121,11 +121,11 @@ public class Hotel {
 		this.hotelName = hotelName;
 	}
 
-	public Address getAddress() {
+	public HotelAddress getAddress() {
 		return address;
 	}
 
-	public void setAddress(Address address) {
+	public void setAddress(HotelAddress address) {
 		this.address = address;
 		
 	}
@@ -202,7 +202,6 @@ public class Hotel {
 		this.longitude = longitude;
 	}
 
-	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -297,9 +296,11 @@ public class Hotel {
 	@Override
 	public String toString() {
 		return "Hotel [hotelId=" + hotelId + ", hotelName=" + hotelName + ", address=" + address + ", review=" + review
-				+ ", rooms=" + rooms + ", photos=" + photos + ", totalRooms=" + totalRooms + ", facilities="
-				+ facilities + ", description=" + description + ", lattitude=" + lattitude + ", longitude=" + longitude
-				+ "]";
+				+ ", rooms=" + rooms + ", photos=" + photos + ", totalRooms=" + totalRooms + ", totalAvailableRooms="
+				+ totalAvailableRooms + ", facilities=" + facilities + ", description=" + description + ", lattitude="
+				+ lattitude + ", longitude=" + longitude + "]";
 	}
 
+	
+	 
 }

@@ -19,8 +19,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.tripeasy.hotel.hotelservice.entity.Address;
 import com.tripeasy.hotel.hotelservice.entity.Hotel;
+import com.tripeasy.hotel.hotelservice.entity.HotelAddress;
 import com.tripeasy.hotel.hotelservice.entity.Room;
 import com.tripeasy.hotel.hotelservice.exception.InvalidInputException;
 import com.tripeasy.hotel.hotelservice.service.HotelService;
@@ -83,7 +83,7 @@ public class ServiceTest {
 		facilities.put("Taj", hotelFacilities);
 
 		Hotel newHotel = new Hotel(115, "Taj",
-				new Address("Sector 2", "Neer to Cap", "Maharashtra", "India", "Pali", 415205), review, rooms, hotelPic,
+				new HotelAddress("Sector 2", "Neer to Cap", "Maharashtra", "India", "Pali", 415205), review, rooms, hotelPic,
 				facilities, "In description it is best hotel in India",50, 50);
 		hotelService.addNewHotel(newHotel);
 
@@ -133,7 +133,7 @@ public class ServiceTest {
 		facilities.put("Taj", hotelFacilities);
 
 		Hotel newHotel = new Hotel(555, "Taj",
-				new Address("Sector 2", "Neer to Cap", "Maharashtra", "India", "Pali", 415205), review, rooms, hotelPic,
+				new HotelAddress("Sector 2", "Neer to Cap", "Maharashtra", "India", "Pali", 415205), review, rooms, hotelPic,
 				facilities, "In description it is best hotel in India", 50 , 50);
 		newHotel.setHotelName("Samrat Hotel");
 		newHotel.setTotalAvailableRooms(50);
